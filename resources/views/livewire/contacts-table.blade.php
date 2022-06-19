@@ -20,7 +20,7 @@
                                     Address</th>
                                 <th
                                     class="border-b dark:border-slate-600 font-medium p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
-                                    Actions</th>
+                                    Favorites</th>
                             </tr>
                         </thead>
                         <tbody class="bg-white dark:bg-slate-800">
@@ -46,9 +46,6 @@
                             @endforeach
                         </tbody>
                     </table>
-                    In favorites {{ var_export($inFavorites) }} <br>
-                    Yoyo: {{ var_export($yoyo) }}<br>
-                    User ID: {{ $user }}
                 </div>
             </div>
             <div class="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5">

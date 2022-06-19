@@ -21,7 +21,7 @@ class ContactsTable extends Component
     {
         $userId = Auth::id();
         $this->user = User::find($userId);
-        $this->inFavorites = Contact::pluck('id');
+        $this->inFavorites = $this->user->contacts->pluck('id');
         $this->contacts = Contact::all();
     }
 
@@ -32,6 +32,6 @@ class ContactsTable extends Component
 
     public function updatedInFavorites($value)
     {
-        $this->yoyo = $value;
+        $this->user->contacts()->sync($this->inFavorites);
     }
 }
