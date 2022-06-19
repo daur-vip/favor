@@ -9,13 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    @php
-                        $contacts = App\Models\Contact::all();
-                        $userId = Illuminate\Support\Facades\Auth::id();
-                        $user = App\Models\User::find($userId);
-                    @endphp
-                    @livewire('contacts-table', ['contacts' => $contacts, 'user' => $user])
-
+                    @livewire('contacts-table')
                 </div>
             </div>
         </div>
